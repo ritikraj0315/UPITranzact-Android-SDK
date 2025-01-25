@@ -43,14 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 UpiTranzactSDK sdk = new UpiTranzactSDK(MainActivity.this, "utz_live_fef691dc36dd3f68", "c34fa342601a163d4acaamn", "UPITRANS");
-                sdk.startPayment(
-                        amountEditText.getText().toString(), // Amount
-                        generateOrderId(),
-                        "https://upitranzact.com",
-                        "Ritik Raj",
-                        "rritik866@gmail.com",
-                        "8294106141",
-                        new PaymentCallback() {
+                sdk.startPayment(amountEditText.getText().toString(), // Amount
+                        generateOrderId(), "https://upitranzact.com", "Ritik Raj", "rritik866@gmail.com", "8294106141", new PaymentCallback() {
                             @Override
                             public void onPaymentSuccess(String order_id, String message) {
                                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -66,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
 //                                intent.putExtra("orderId", order_id);
 //                                startActivity(intent);
                             }
-                        }
-                );
+                        });
             }
         });
+
     }
 
     public String generateOrderId() {

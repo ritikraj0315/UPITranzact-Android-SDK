@@ -59,28 +59,4 @@ dependencies {
 
 }
 
-publishing {
-    publications {
-        bar(MavenPublication) {
-            groupId = "com.upitranzact" // Replace with your unique Group ID
-            artifactId = "upitranzact" // Replace with your library name
-            version = "1.0.0" // Replace with your version
-            artifact("$buildDir/outputs/aar/upitranzact-release.aar");
-
-
-
-        }
-    }
-
-    repositories {
-        maven {
-            name "UPITranzactAndroidSDK"
-            url uri("https://maven.pkg.github.com/ritikraj0315/UPITranzact-Android-SDK")
-            credentials{
-                username = findProperty("github.username") as String
-                password = findProperty("github.password") as String
-            }
-        }
-    }
-}
 

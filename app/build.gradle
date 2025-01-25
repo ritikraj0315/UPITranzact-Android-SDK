@@ -48,4 +48,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation "com.airbnb.android:lottie:6.1.0"
+
+//    implementation "com.upitranzact:upitranzact:1.0.0"
 }
